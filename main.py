@@ -40,3 +40,17 @@ async def add_user(user: Formulario):
         return {"nombre": user.nombre}
     except Exception as e:
         return {"error": str(e)}
+
+
+#EXERCICI 3. 
+#Les dades que poden ser sensibles son la contrasenya, la direcció i també ho podria ser el correu electrònic.
+def dades_schema(dades) -> dict:
+    return {"nombre": dades[1],
+            "apellido": dades[2],
+            "descripcion": dades[4],
+            "curso": dades[5],
+            "anyo": dades[6],
+            "codigo_postal": dades[8],
+            }
+
+
